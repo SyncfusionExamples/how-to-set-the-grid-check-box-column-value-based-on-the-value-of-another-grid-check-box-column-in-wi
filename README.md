@@ -1,15 +1,15 @@
-# How to set the GridCheckBoxColumn value based on the value of another GridCheckBoxColumn in WinForms DetailsViewDataGrid (SfDataGrid)?
+# How to Set the GridCheckBoxColumn Value Based on the Value of Another GridCheckBoxColumn in WinForms DetailsViewDataGrid?
 
-How to set the GridCheckBoxColumn value based on the value of another GridCheckBoxColumn in WinForms DetailsViewDataGrid (SfDataGrid)?
+This sample illustrates how to set the [GridCheckBoxColumn](https://help.syncfusion.com/cr/windowsforms/Syncfusion.WinForms.DataGrid.GridCheckBoxColumn.html) value based on the value of another `GridCheckBoxColumn` in [WinForms DataGrid](https://www.syncfusion.com/winforms-ui-controls/datagrid) (SfDataGrid).
 
+### About the sample
 
-# About the sample
-
-In SfDataGrid.DetailViewDataGrid, you can set the value for a checkbox in one GridCheckBoxColumn when enable or disabling it in another GridCheckBoxColum using SfDataGrid.CellCheckBoxClick and SfDataGrid.CurrentCellActivating events.
+In `SfDataGrid.DetailViewDataGrid`, you can set the value for a checkbox in one `GridCheckBoxColumn` when enable or disabling it in another `GridCheckBoxColum` using [SfDataGrid.CellCheckBoxClick](https://help.syncfusion.com/cr/windowsforms/Syncfusion.WinForms.DataGrid.SfDataGrid.html#Syncfusion_WinForms_DataGrid_SfDataGrid_CellCheckBoxClick) and [SfDataGrid.CurrentCellActivating](https://help.syncfusion.com/cr/windowsforms/Syncfusion.WinForms.DataGrid.SfDataGrid.html#Syncfusion_WinForms_DataGrid_SfDataGrid_CurrentCellActivating) events.
 
 ```c#
 FirstLevelNestedGrid.CellCheckBoxClick += FirstLevelNestedGrid_CellCheckBoxClick;
 FirstLevelNestedGrid.CurrentCellActivating += FirstLevelNestedGrid_CurrentCellActivating;
+
 private void FirstLevelNestedGrid_CurrentCellActivating(object sender, Syncfusion.WinForms.DataGrid.Events.CurrentCellActivatingEventArgs e)
 {
     if (e.DataColumn.GridColumn.MappingName == "IsClosed1")
@@ -52,5 +52,8 @@ private void FirstLevelNestedGrid_CellCheckBoxClick(object sender, Syncfusion.Wi
     }
 }
 ```
+
+![Set the GridCheckBoxColumn value based on the value of another GridCheckBoxColumn in DetailsViewDataGrid](CheckBoxColumnValueBasedOnOther.gif)
+
 ## Requirements to run the demo
  Visual Studio 2015 and above versions
